@@ -1,0 +1,18 @@
+{{- if and .Values.pspEnabled (.Capabilities.APIVersions.Has "policy/v1beta1/PodSecurityPolicy") }}
+apiVersion: {{ template "rbac.apiVersion" . }}
+kind: Role
+metadata:
+  labels:
+    {{- include "prometheus-smtp-exporter.labels" . | nindent 4 }}
+  name: {{ template "prometheus-smtp-exporter.fullname" . }}
+  namespace: {{ template "prometheus-smtp-exporter.namespace" . }}
+rules:
+  - apiGroups:
+    - policy
+    resources:
+    - podsecuritypolicies
+    resourceNames:
+    - {{ template "prometheus-smtp-exporter.fullname" . }}-psp
+    verbs:
+    - use
+{{- end -}}

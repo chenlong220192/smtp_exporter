@@ -1,0 +1,23 @@
+apiVersion: v2
+appVersion: 0.23.0
+description: Prometheus smtp Exporter
+home: https://github.com/prometheus/smtp_exporter
+keywords:
+- prometheus
+- smtp
+- monitoring
+maintainers:
+- email: cedric@desaintmartin.fr
+  name: desaintmartin
+- email: gianrubio@gmail.com
+  name: gianrubio
+- email: me@sota.sh
+  name: rsotnychenko
+- email: monotek23@gmail.com
+  name: monotek
+name: prometheus-smtp-exporter
+sources:
+- https://github.com/prometheus/smtp_exporter
+- https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-smtp-exporter
+type: application
+version: 7.7.0

@@ -258,7 +258,7 @@ func newSMTPClient(ctx context.Context, module config.Module, logger log.Logger,
 
 	var dialProtocol, dialTarget string
 	if ip.IP.To4() == nil {
-		dialProtocol = "tcp6"
+		dialProtocol = "tcp4"
 	} else {
 		dialProtocol = "tcp4"
 	}

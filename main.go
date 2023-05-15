@@ -334,11 +334,10 @@ func run() int {
 			<head><title>Smtp Exporter</title></head>
 			<body>
 			<h1>Smtp Exporter</h1>
-			<p><a href="probe?target=smtp.gmail.com:465&module=smtp_tls_auth_fail:">Probe smtp.gmail.com for smtp_tls_auth_fail</a></p>
-			<p><a href="probe?target=smtp.gmail.com:465&module=smtp_tls_auth_fail&debug=true">Debug Probe smtp.gmail.com for smtp_tls_auth_fail</a></p>
+			<p><a href="probe?module=smtp_authentication_ok&target=smtp.qq.com:465&debug=true">Probe smtp.qq.com:465 smtp_authentication_ok</a></p>
+			<p><a href="probe?module=smtp_imap_receiver&target=smtp.qq.com:465&debug=true">Probe smtp.qq.com:465 for smtp_imap_receiver</a></p>
 			<p><a href="metrics">Metrics</a></p>
 			<p><a href="config">Configuration</a></p>
-			<p>TODO: links to the docs</p>
 			<h2>Recent Probes</h2>
 			<table border='1'><tr><th>Module</th><th>Target</th><th>Result</th><th>Debug</th>`))
 

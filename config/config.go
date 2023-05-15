@@ -52,11 +52,7 @@ var (
 
 	DefaultDNSBLProbe = DNSBLProbe{
 		FailOnBlacklistTimeout: true,
-		Blacklists: []string{
-			"zen.spamhaus.org",
-			"b.barracudacentral.org",
-			"ix.dnsbl.manitu.net",
-		},
+		Blacklists: []string{},
 	}
 
 	DefaultSPFProbe = SPFProbe{

@@ -79,15 +79,15 @@ func IMAPReceiver(ctx context.Context, subject string, module config.IMAPReceive
 
 	// this loop does not honor the Timeout
 	for len(seq) == 0 {
+		time.Sleep(500 * time.Millisecond)
 		if seq, err = c.Search(searchCriteria); err != nil {
 			level.Error(logger).Log("msg", "Error searching for messages", "err", err)
 			return
 		}
-		time.Sleep(1 * time.Second)
 	}
 
 	seqset := new(imap.SeqSet)
-	seqset.AddNum(seq...)
+	seqset.AddNum(seq[len(seq)-1])
 
 	section := &imap.BodySectionName{}
 	items := []imap.FetchItem{section.FetchItem()}
@@ -202,7 +202,7 @@ func newIMAPClient(ctx context.Context, module config.IMAPReceiver, logger log.L
 	}
 	var dialProtocol string
 	if net.ParseIP(ip).To4() == nil {
-		dialProtocol = "tcp6"
+		dialProtocol = "tcp4"
 	} else {
 		dialProtocol = "tcp4"
 	}

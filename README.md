@@ -3,7 +3,7 @@
 [![Go tests for smtp_exporter](https://github.com/kmille/smtp_exporter/actions/workflows/tests.yaml/badge.svg)](https://github.com/kmille/smtp_exporter/actions/workflows/tests.yaml)
 # smtp_exporter 
 
-smtp_exporter is a Prometheus Exporter for testing your outgoing mail server. It's internal design and usage is very similar to [blackbox_exporter](https://github.com/prometheus/blackbox_exporter). There is currently only one Prober (smtp). Check the outstanding [TODOs](/TODO) for more information. You can reload the configuration with a post request to /-/reload. There is also a history log like you know it from blackbox_exporter.
+smtp_exporter is a Prometheus Exporter for testing your outgoing mail server. It's internal design and usage is very similar to [smtp_exporter](https://github.com/prometheus/smtp_exporter). There is currently only one Prober (smtp). Check the outstanding [TODOs](/TODO) for more information. You can reload the configuration with a post request to /-/reload. There is also a history log like you know it from smtp_exporter.
 
 # How to use it
 
