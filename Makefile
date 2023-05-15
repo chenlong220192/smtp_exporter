@@ -33,7 +33,7 @@ helm.uninstall:
 	helm uninstall prometheus-smtp-exporter -n prometheus
 
 #
-helm: package docker.build helm.uninstall
+helm: package docker.build
 	helm upgrade --install \
 	  --create-namespace prometheus-smtp-exporter \
 	  --namespace prometheus \

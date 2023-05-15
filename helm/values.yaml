@@ -124,8 +124,8 @@ affinity: {}
 configExistingSecretName: ""
 # Store the configuration as a `Secret` instead of a `ConfigMap`, useful in case it contains sensitive data
 secretConfig: false
-config: {}
-  # modules:
+config:
+  modules: {}
     # http_2xx:
     #   prober: http
     #   timeout: 5s
@@ -137,7 +137,7 @@ config: {}
     #   prober: tcp
 
 # Set custom config path, other than default /config/smtp.yaml. If let empty, path will be "/config/smtp.yaml"
-configPath: "/etc/smtp_exporter"
+configPath: "/etc/smtp_exporter/smtp.yml"
 
 extraConfigmapMounts: []
   # - name: certs-configmap
